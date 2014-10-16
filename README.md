@@ -1,7 +1,5 @@
-turnos_free_mobile_front
+turnos free mobile
 ========================
-
-proyecto "turnos free" : 
 
 se trata de una aplicación que posee 2 modos
 
