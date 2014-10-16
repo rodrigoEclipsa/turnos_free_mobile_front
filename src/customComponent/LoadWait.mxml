@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SkinnableContainer xmlns:fx="http://ns.adobe.com/mxml/2009"
+		 xmlns:s="library://ns.adobe.com/flex/spark"
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		  width="100%"
+		   height="100%"
+		 currentState="state_busy"
+		 backgroundColor = "#E0E0E0"
+		    backgroundAlpha = ".5"
+		
+		
+		   
+		 >
+	
+	
+	<fx:Script>
+		<![CDATA[
+			
+			public static const state_custom:String="state_custom";
+			public static const state_busy:String="state_busy";
+			public static const state_login:String="state_login";
+
+			public static var state_custom_progress:String="state_custom_progress";
+			
+			
+			public var countLoad:int;
+
+
+		
+			[Bindable]
+			public var loadStatus:String;
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+
+	<s:states>
+		<s:State name="state_custom"/>
+		<s:State name="state_busy"/>
+		<s:State name="state_login"/>
+		<s:State name="state_custom_progress"/>
+	</s:states>
+
+
+	<s:Group includeIn="state_custom,state_login,state_custom_progress"
+	width="208"
+	height="51"
+	
+	horizontalCenter="0"
+
+	verticalCenter="0">
+	
+	
+		
+		<s:Rect width="100%"
+				height="100%">
+			
+			<s:stroke>
+				<s:SolidColorStroke color="#000000"  />
+			</s:stroke>
+			
+			
+			
+		</s:Rect>
+		
+		
+		<s:Rect left="1"
+				right="1"
+				top="1"
+				bottom="1"
+				width="100%"
+				height="100%"
+				>
+			
+			<s:fill>
+				<s:SolidColor color="#A7A7A7"/>
+				
+			</s:fill>
+		</s:Rect>
+		
+		
+		
+		<s:BusyIndicator width="30"
+						  horizontalCenter="0"
+						    top="2"
+						 height="20"
+					
+						/>
+	
+		<s:Label text="{loadStatus}" 
+				 fontWeight="bold"
+				    bottom="2"
+				  horizontalCenter="0"
+				 />
+		
+		
+		
+	</s:Group>
+
+
+
+
+	
+	<s:BusyIndicator width="30"
+					 includeIn="state_busy"
+					 height="30"
+					 horizontalCenter="0"
+					 verticalCenter="0"/>
+
+
+
+
+
+
+
+</s:SkinnableContainer>

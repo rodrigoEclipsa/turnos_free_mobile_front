@@ -1,0 +1,22 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace ns "http://flex.apache.org/experimental/ns";
+
+
+
+
+
+
+global {
+
+
+	
+	modalTransparencyBlur: 0;
+	modalTransparency: 0.5;
+	modalTransparencyColor: #E0E0E0;
+	modalTransparencyDuration: 0;
+	font-family: Arial;
+	
+	
+}
